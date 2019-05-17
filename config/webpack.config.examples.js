@@ -12,6 +12,10 @@ module.exports = {
     module: {
         rules: [
             {
+                test: /\.scss$/,
+                use: ['style-loader?sourceMap=true', 'css-loader?sourceMap=true', 'sass-loader?sourceMap=true']
+            },
+            {
                 test: /\.css$/,
                 loader: "style-loader!css-loader"
             },
