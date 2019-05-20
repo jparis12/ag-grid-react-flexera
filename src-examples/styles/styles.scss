@@ -1,22 +1,62 @@
 // Customize the look and feel of the grid with Sass variables
 // Up-to-date list of variables is available here: http://www.ag-grid.com/javascript-grid-styling/#customizing-sass-variables
 
+/* Typography */
+$font-family: "Nunito", sans-serif;
+$font-color: #333333;
+$font-size: 0.875rem;
+
+$secondary-font-family: "Source Sans Pro", sans-serif;
+$secondary-font-size: 0.875rem;
+$secondary-font-weight: 700;
+
+.ag-theme-balham {
+    .ag-header {
+        color: #333 !important;
+        letter-spacing: 0.2px;
+        text-transform: uppercase;
+    }
+    .ag-row {
+        border-color: #DDDDDD !important;
+        border-width: 1px;
+    }
+    .ag-cell {
+
+    }
+}
+
+/* Grid */
+//this was originally 4px in ag-grid documentation
+//$grid-size: 8px;
+
+/* Row styles */
+$active: rgba(0,84,159,0.15);
+$hover-color: #F1F1F1;
+$border-color: #DDDDDD;
+//$row-height: 48px;
+
+/* Header */
+//$headerHeight: 40px;
+
+
+
+
 // That's the default icons
 $icons-path: "../../node_modules/ag-grid-community/src/styles/ag-theme-balham/icons/";
 
 // changes the default icon color
-$icon-color: #03a9f4;
+$icon-color: #595959;
 
 // changes the icon secondary color (checkbox background)
-$alt-icon-color: #03a9f4;
+$alt-icon-color: #00549f;
 
 // changes the selected checkbox check mark color
-$accent-color: #FFFFF1;
+$accent-color: #FFFFFF;
 
-// $header-height: 50px;
-// $row-height: 40px;
+// $header-height: 56px;
+// $row-height: 48px;
 $row-border-width: 1px;
-$hover-color: cornsilk;
+//$hover-color: cornsilk;
 
 $ag-range-selected-color-1: rgb(250, 235, 215);
 $ag-range-selected-color-2: darken($ag-range-selected-color-1, 10%);
@@ -25,3 +65,4 @@ $ag-range-selected-color-4: darken($ag-range-selected-color-1, 30%);
 
 @import "~ag-grid-community/src/styles/ag-grid.scss";
 @import "~ag-grid-community/src/styles/ag-theme-balham/sass/ag-theme-balham.scss";
+
