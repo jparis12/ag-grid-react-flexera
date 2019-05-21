@@ -182,6 +182,7 @@ export default class RichGridDeclarativeExample extends Component {
                             onRowSelected={this.onRowSelected}
                             onCellClicked={this.onCellClicked}
                             onModelUpdated={this.calculateRowCount}
+                            rowHeight={48}
 
                             // binding to simple properties
                             sideBar={this.state.sideBar}
@@ -223,7 +224,7 @@ export default class RichGridDeclarativeExample extends Component {
                                               cellRenderer={RichGridDeclarativeExample.countryCellRenderer}
                                               filterParams={{
                                                   cellRenderer: RichGridDeclarativeExample.countryCellRenderer,
-                                                  cellHeight: 20
+                                                  // cellHeight: 20
                                               }}
                                               enableRowGroup enablePivot pinned editable/>
                                 <AgGridColumn field="dob" width={175} headerName="DOB" filter="agDateColumnFilter"
