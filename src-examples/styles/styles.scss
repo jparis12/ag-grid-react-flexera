@@ -1,27 +1,23 @@
 // Customize the look and feel of the grid with Sass variables
 // Up-to-date list of variables is available here: http://www.ag-grid.com/javascript-grid-styling/#customizing-sass-variables
 
-@import "~ag-grid-community/src/styles/ag-grid.scss";
-@import "~ag-grid-community/src/styles/ag-theme-balham/sass/ag-theme-balham.scss";
-//this needs to change to be a relative path
-@import "/Users/jessicaparis/Documents/GitHub/ag-grid-react-flexera/src-examples/styles/colors.scss";
-
-
 // Typography
 $font-family: "Nunito", sans-serif;
-$font-color: #333333;
+$foreground-color: #333333;
 $font-size: 0.875rem;
 $font-weight: 400;
 
 $secondary-font-family: "Source Sans Pro", sans-serif;
+$secondary-foreground-color: #333333;
 $secondary-font-size: 0.875rem;
 $secondary-font-weight: 700;
+
+$header-foreground-color: #333333;
 
 .ag-theme-balham {
     .ag-header {
         background-color: #FFFFFF !important;
         border: 1px solid #9B9B9B !important;
-        color: #333333;
         letter-spacing: 0.2px;
         text-transform: uppercase;
     }
@@ -87,3 +83,7 @@ $ag-range-selected-color-2: darken($ag-range-selected-color-1, 10%);
 $ag-range-selected-color-3: darken($ag-range-selected-color-1, 20%);
 $ag-range-selected-color-4: darken($ag-range-selected-color-1, 30%);
 
+@import "~ag-grid-community/src/styles/ag-grid.scss";
+@import "~ag-grid-community/src/styles/ag-theme-balham/sass/ag-theme-balham.scss";
+//this needs to change to be a relative path
+@import "/Users/jessicaparis/Documents/GitHub/ag-grid-react-flexera/src-examples/styles/colors.scss";
