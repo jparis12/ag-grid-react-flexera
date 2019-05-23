@@ -1,7 +1,7 @@
 // Customize the look and feel of the grid with Sass variables
 // Up-to-date list of variables is available here: http://www.ag-grid.com/javascript-grid-styling/#customizing-sass-variables
 
-/* Typography */
+// Typography
 $font-family: "Nunito", sans-serif;
 $font-color: #333333;
 $font-size: 0.875rem;
@@ -13,7 +13,9 @@ $secondary-font-weight: 700;
 
 .ag-theme-balham {
     .ag-header {
-        color: #333 !important;
+        background-color: #FFFFFF !important;
+        border: 1px solid #9B9B9B !important;
+        color: $black-80;
         letter-spacing: 0.2px;
         text-transform: uppercase;
     }
@@ -22,25 +24,28 @@ $secondary-font-weight: 700;
         border-width: 1px;
     }
     .ag-cell {
-
     }
 }
 
-/* Grid */
+.ag-cell.ag-cell-not-inline-editing.ag-cell-with-height.ag-cell-value {
+    padding-top: 0 !important;
+}
+
+// Grid
 //this was originally 4px in ag-grid documentation
 //$grid-size: 8px;
 
-/* Row styles */
+// Row styles
 $active: rgba(0,84,159,0.15);
 $hover-color: #F1F1F1;
 $border-color: #DDDDDD;
 $row-height: 48px;
 
-/* Header */
-$headerHeight: 40px;
+// Header
+$headerHeight: 56px;
 .active {color: #00549F !important;}
 
-/* Checkboxes */
+// Checkboxes
 .ag-theme-balham {
    .ag-icon-checkbox-unchecked {
         background: url(/icons/checkbox-unchecked.svg) !important;
@@ -55,7 +60,7 @@ $headerHeight: 40px;
 }
 
 
-// That's the default icons
+// Default icons
 $icons-path: "../../node_modules/ag-grid-community/src/styles/ag-theme-balham/icons/";
 
 // changes the default icon color
@@ -79,4 +84,6 @@ $ag-range-selected-color-4: darken($ag-range-selected-color-1, 30%);
 
 @import "~ag-grid-community/src/styles/ag-grid.scss";
 @import "~ag-grid-community/src/styles/ag-theme-balham/sass/ag-theme-balham.scss";
+//this needs to change to be a relative path
+@import "/Users/jessicaparis/Documents/GitHub/ag-grid-react-flexera/src-examples/styles/colors.scss";
 
