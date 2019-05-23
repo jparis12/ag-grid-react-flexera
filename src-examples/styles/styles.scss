@@ -5,6 +5,7 @@
 $font-family: "Nunito", sans-serif;
 $font-color: #333333;
 $font-size: 0.875rem;
+$font-weight: 400;
 
 $secondary-font-family: "Source Sans Pro", sans-serif;
 $secondary-font-size: 0.875rem;
@@ -37,8 +38,21 @@ $row-height: 48px;
 
 /* Header */
 $headerHeight: 40px;
+.active {color: #00549F !important;}
 
-
+/* Checkboxes */
+.ag-theme-balham {
+   .ag-icon-checkbox-unchecked {
+        background: url(/icons/checkbox-unchecked.svg) !important;
+        height: 18px !important;
+        width: 18px !important;
+    }
+    .ag-icon-checkbox-checked {
+        background: url(/icons/checkbox-checked.svg) !important;
+        height: 18px !important;
+        width: 18px !important;
+     }
+}
 
 
 // That's the default icons
