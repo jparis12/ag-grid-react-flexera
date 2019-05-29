@@ -14,9 +14,10 @@ $secondary-font-weight: 700;
 
 $header-foreground-color: #333333;
 
+$disabled-foreground-color: #C1C1C1;
+
 .ag-theme-balham {
     .ag-header {
-        background-color: #FFFFFF !important;
         border: 1px solid #9B9B9B !important;
         letter-spacing: 0.2px;
         text-transform: uppercase;
@@ -34,20 +35,21 @@ $header-foreground-color: #333333;
 }
 
 // Grid
-//this was originally 4px in ag-grid documentation
-//$grid-size: 8px;
+//$grid-size: 4px;
 
 // Row styles
-$active: rgba(0,84,159,0.15);
-$hover-color: #F1F1F1;
+$background-color: #FFFFFF;
+$selected-color: rgba(0,84,159,0.08);
+$hover-color: #F8F8F8;
 $border-color: #DDDDDD;
 $row-height: 48px;
 
 // Header
+$header-background-color: #FFFFFF;
 $headerHeight: 56px;
-.active {color: #00549F !important;}
 
 // Checkboxes
+$icon-size: 18px;
 .ag-theme-balham {
    .ag-icon-checkbox-unchecked {
         background: url(/icons/checkbox-unchecked.svg) !important;
@@ -61,6 +63,12 @@ $headerHeight: 56px;
      }
 }
 
+// Tooltips
+$tooltip-background-color: #595959;
+$tooltip-foreground-color: #FFFFFF;
+
+// Inputs
+$input-disabled-background-color: #F1F1F1;
 
 // Default icons
 $icons-path: "../../node_modules/ag-grid-community/src/styles/ag-theme-balham/icons/";
