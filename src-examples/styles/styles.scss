@@ -13,29 +13,13 @@ $secondary-font-size: 0.875rem;
 $secondary-font-weight: 700;
 
 $header-foreground-color: #333333;
-
 $disabled-foreground-color: #C1C1C1;
 
-.ag-theme-balham {
-    .ag-header {
-        border: 1px solid #9B9B9B !important;
-        letter-spacing: 0.2px;
-        text-transform: uppercase;
-    }
-    .ag-row {
-        border-color: #DDDDDD !important;
-        border-width: 1px;
-    }
-    .ag-cell {
-    }
-}
-
-.ag-cell.ag-cell-not-inline-editing.ag-cell-with-height.ag-cell-value {
-    padding-top: 0 !important;
-}
+// Checkboxes
+$icon-size: 16px;
 
 // Grid
-//$grid-size: 4px;
+$grid-size: 4px;
 
 // Row styles
 $background-color: #FFFFFF;
@@ -47,21 +31,6 @@ $row-height: 48px;
 // Header
 $header-background-color: #FFFFFF;
 $headerHeight: 56px;
-
-// Checkboxes
-$icon-size: 18px;
-.ag-theme-balham {
-   .ag-icon-checkbox-unchecked {
-        background: url(/icons/checkbox-unchecked.svg) !important;
-        height: 18px !important;
-        width: 18px !important;
-    }
-    .ag-icon-checkbox-checked {
-        background: url(/icons/checkbox-checked.svg) !important;
-        height: 18px !important;
-        width: 18px !important;
-     }
-}
 
 // Tooltips
 $tooltip-background-color: #595959;
@@ -82,8 +51,8 @@ $alt-icon-color: #00549f;
 // changes the selected checkbox check mark color
 $accent-color: #FFFFFF;
 
-// $header-height: 56px;
-// $row-height: 48px;
+$header-height: 56px;
+$row-height: 48px;
 $row-border-width: 1px;
 
 $ag-range-selected-color-1: rgb(250, 235, 215);
@@ -91,7 +60,82 @@ $ag-range-selected-color-2: darken($ag-range-selected-color-1, 10%);
 $ag-range-selected-color-3: darken($ag-range-selected-color-1, 20%);
 $ag-range-selected-color-4: darken($ag-range-selected-color-1, 30%);
 
+//CSS
+.ag-theme-balham {
+    .ag-header {
+        border: 1px solid #9B9B9B !important;
+        letter-spacing: 0.2px;
+        text-transform: uppercase;
+    }
+    .ag-row {
+        border-color: #DDDDDD !important;
+        border-width: 1px;
+    }
+    .ag-cell {
+        padding-top: 0 !important;
+    }
+    .ag-header-cell, 
+    .ag-cell {
+        padding: 0 24px !important;
+    }
+    .ag-header-group-cell,
+    .ag-header-cell {
+        line-height: 34px !important;
+    }
+}
+
+.ag-cell.ag-cell-not-inline-editing.ag-cell-with-height.ag-cell-value {
+    padding-top: 0 !important;
+}
+
+// Pivot Mode
+.ag-theme-balham {
+    .ag-side-bar {
+        background-color: #F1F1F1 !important;
+    }
+    .ag-tool-panel-wrapper {
+        .ag-column-drop {
+            .ag-column-drop-title {
+                font-family: $secondary-font-family;
+            }
+        }
+        .ag-pivot-mode-panel {
+            height: 48px !important;
+            line-height: 48px !important;
+             .ag-pivot-mode-select {
+                .ag-icon-checkbox-unchecked, .ag-icon-checkbox-checked {
+                    height: $icon-size;
+                    width: $icon-size;
+                    margin: 16px;
+                }
+            }
+        }
+    }
+}
+
+
+// Checkboxes
+.ag-theme-balham {
+    .ag-icon-checkbox-unchecked {
+        background: url(/icons/checkbox-unchecked.svg) !important;
+        height: $icon-size;
+        width: $icon-size;
+    }
+    .ag-icon-checkbox-checked {
+        background: url(/icons/checkbox-checked.svg) !important;
+        height: $icon-size;
+        width: $icon-size;
+     }
+}
+
+// Icons
+.customSortRemoveLabel {
+    float: right !important;
+}
+.customSortDownLabel {
+    margin-left: 16px !important;
+}
+
 @import "~ag-grid-community/src/styles/ag-grid.scss";
 @import "~ag-grid-community/src/styles/ag-theme-balham/sass/ag-theme-balham.scss";
-//this needs to change to be a relative path
-@import "/Users/jessicaparis/Documents/GitHub/ag-grid-react-flexera/src-examples/styles/colors.scss";
+@import "../styles/colors.scss";
