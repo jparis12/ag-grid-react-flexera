@@ -76,7 +76,8 @@ $ag-range-selected-color-4: darken($ag-range-selected-color-1, 30%);
     }
     .ag-header-cell, 
     .ag-cell {
-        padding: 0 24px !important;
+        //need this padding to match design but creating issues in cell
+        //padding: 0 24px !important;
     }
     .ag-header-group-cell,
     .ag-header-cell {
@@ -118,12 +119,14 @@ $ag-range-selected-color-4: darken($ag-range-selected-color-1, 30%);
 .ag-theme-balham {
     .ag-icon-checkbox-unchecked {
         background: url(/icons/checkbox-unchecked.svg) !important;
-        height: $icon-size;
+        //need to override for height to be correct in pivot mode
+        height: $icon-size !important;
         width: $icon-size;
     }
     .ag-icon-checkbox-checked {
         background: url(/icons/checkbox-checked.svg) !important;
-        height: $icon-size;
+        //need to override for height to be correct in pivot mode
+        height: $icon-size !important;
         width: $icon-size;
      }
 }
