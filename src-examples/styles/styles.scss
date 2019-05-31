@@ -76,7 +76,7 @@ $ag-range-selected-color-4: darken($ag-range-selected-color-1, 30%);
     }
     .ag-header-cell, 
     .ag-cell {
-        //need this padding to match design but creating issues in cell
+        //need this padding to match design but is creating issues in cell
         //padding: 0 24px !important;
     }
     .ag-header-group-cell,
@@ -94,20 +94,47 @@ $ag-range-selected-color-4: darken($ag-range-selected-color-1, 30%);
     .ag-side-bar {
         background-color: #F1F1F1 !important;
     }
+    .ag-primary-cols-header-panel {
+        // sets height for pivot mode filter section
+        height: auto !important;
+        // sets equal padding on top and bottom of filter box
+        padding: 4px 0 !important;
+    }
+    .ag-primary-cols-filter {
+        padding: 4px;
+        //border-radius: 4px;
+    }
     .ag-tool-panel-wrapper {
-        .ag-column-drop {
-            .ag-column-drop-title {
+        .ag-header-cell-label {
+            .ag-header-cell-text {
                 font-family: $secondary-font-family;
             }
         }
+        .ag-column-drop {
+            .ag-column-drop-title {
+                font-family: $secondary-font-family;
+                font-weight: 700;
+                margin-bottom: 8px;
+            }
+            .ag-column-drop-empty-message {
+                color: #9B9B9B !important;
+                font-family: $font-family !important;
+                font-weight: 400 !important;
+            }
+        }
         .ag-pivot-mode-panel {
-            height: 48px !important;
-            line-height: 48px !important;
+            height: auto !important;
+            line-height: 35px !important;
+            .ag-pivot-mode-select {
+                .ag-checkbox-label {
+                    margin-left: 0 !important;
+                }
+            }
              .ag-pivot-mode-select {
                 .ag-icon-checkbox-unchecked, .ag-icon-checkbox-checked {
                     height: $icon-size;
                     width: $icon-size;
-                    margin: 16px;
+                    margin: 8px;
                 }
             }
         }
